@@ -5,15 +5,15 @@ LD := ld
 
 .PHONY: all clean
 
-all: mendelbrot
+all: mandelbrot
 
-mendelbrot: mendelbrot.o
-	$(LD) mendelbrot.o -o mendelbrot
+mandelbrot: mandelbrot.o
+	$(LD) mandelbrot.o -o mandelbrot
 	@$(RM) *.o
 
 %.o: %.s
 	$(AS) $(ASFLAGS) $< -o $@
 
 clean:
-	$(RM) mendelbrot *.o
+	$(RM) mandelbrot *.o
 
